@@ -1,0 +1,433 @@
+.footer {
+  padding-bottom: 30px;
+  padding-top: 50px;
+  margin-top: 140px;
+  overflow-x: hidden;
+  @media (max-width: 1300px) {
+    margin-top: 120px;
+  }
+  @include r($desktop) {
+    margin-top: 110px;
+  }
+  @media (max-width: 1100px) {
+    margin-top: 100px;
+  }
+  @include r($lg) {
+    margin-top: 80px;
+  }
+  @include r($tablet) {
+    margin-top: 70px;
+  }
+  @include r($sm) {
+    margin-top: 50px;
+    padding-bottom: 20px;
+  }
+
+  &__title {
+    font-family: $heading;
+    @include flex-between(30);
+    align-items: center;
+    margin-bottom: 290px;
+    font-size: 172px;
+    line-height: .9;
+    letter-spacing: -1.72px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: $black50;
+    position: relative;
+    @media (max-width: 1430px) {
+      font-size: 168px;
+    }
+    @media (max-width: 1400px) {
+      font-size: 164px;
+      margin-bottom: 260px;
+    }
+    @media (max-width: 1335px) {
+      font-size: 160px;
+      margin-bottom: 230px;
+    }
+    @media (max-width: 1310px) {
+      font-size: 156px;
+      margin-bottom: 210px;
+    }
+    @media (max-width: 1270px) {
+      font-size: 150px;
+    }
+    @media (max-width: 1235px) {
+      font-size: 144px;
+    }
+    @media (max-width: 1160px) {
+      font-size: 138px;
+      margin-bottom: 190px;
+    }
+    @media (max-width: 1140px) {
+      font-size: 136px;
+    }
+    @media (max-width: 1115px) {
+      font-size: 132px;
+    }
+    @media (max-width: 1090px) {
+      gap: 5px;
+      flex-direction: column;
+      font-size: 122px;
+      margin-bottom: 90px;
+      align-items: flex-start;
+    }
+    @include r($lg) {
+      font-size: 116px;
+      gap: 0;
+    }
+    @media (max-width: 950px) {
+      font-size: 108px;
+    }
+    @media (max-width: 860px) {
+      font-size: 102px;
+    }
+    @include r($tablet) {
+      font-size: 94px;
+      margin-bottom: 85px;
+    }
+    @media (max-width: 680px) {
+      font-size: 88px;
+    }
+    @include r($sm) {
+      font-size: 82px;
+      margin-bottom: 75px;
+    }
+    @media (max-width: 560px) {
+      font-size: 78px;
+      margin-bottom: 55px;
+    }
+    @media (max-width: 540px) {
+      font-size: 74px;
+    }
+    @media (max-width: 510px) {
+      font-size: 70px;
+      margin-bottom: 60px;
+    }
+    @media (max-width: 490px) {
+      margin-bottom: 115px;
+    }
+    @include r($phone) {
+      font-size: 66px;
+    }
+    @media (max-width: 400px) {
+      gap: 5px;
+      font-size: 62px;
+      margin-bottom: 100px;
+    }
+
+    img {
+      @include objectCoverBg;
+      position: absolute;
+      right: 27%;
+      @media (max-width: 1400px) {
+        right: 26.3%;
+      }
+      @media (max-width: 1365px) {
+        width: auto;
+        height: 274px;
+        right: 27%;
+      }
+      @media (max-width: 1270px) {
+        height: 264px;
+      }
+      @media (max-width: 1235px) {
+        height: 254px;
+      }
+      @include r($desktop) {
+        height: 248px;
+      }
+      @media (max-width: 1130px) {
+        height: 240px;
+        top: -52%;
+      }
+      @media (max-width: 1115px) {
+        height: 232px;
+        right: 27.5%;
+      }
+      @media (max-width: 1090px) {
+        right: -7%;
+        height: 330px;
+        top: -27%;
+      }
+      @include r($lg) {
+        height: 310px;
+        top: -28%;
+      }
+      @media (max-width: 950px) {
+        height: 290px;
+      }
+      @media (max-width: 860px) {
+        height: 275px;
+      }
+      @include r($tablet) {
+        height: 265px;
+        right: -8%;
+        top: -32%;
+      }
+      @media (max-width: 680px) {
+        height: 250px;
+        top: -33.5%;
+        right: -8.5%;
+      }
+      @include r($sm) {
+        right: -9.6%;
+        top: -34.2%;
+        height: 240px;
+      }
+      @media (max-width: 560px) {
+        height: 230px;
+        top: -35%;
+      }
+      @media (max-width: 535px) {
+        height: 220px;
+        top: -36.5%;
+      }
+      @media (max-width: 510px) {
+        height: 215px;
+        top: -37%;
+      }
+      @media (max-width: 490px) {
+        top: 20%;
+      }
+      @media (max-width: 440px) {
+        right: -10%;
+      }
+      @media (max-width: 400px) {
+        right: -12%;
+      }
+      @media (max-width: 380px) {
+        height: 185px;
+        top: 32%;
+      }
+    }
+
+    span {
+      position: relative;
+      z-index: 10;
+    }
+  }
+
+  &__links {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 16px;
+    margin-bottom: 16px;
+    @media (max-width: 1160px) {
+      grid-gap: 13px;
+      margin-bottom: 13px;
+    }
+    @media (max-width: 1090px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 560px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 400px) {
+      display: flex;
+      overflow-x: scroll;
+      margin: 0 -15px;
+      padding: 15px 15px 10px;
+      margin-bottom: 20px;
+      &::-webkit-scrollbar {
+        height: 3px;
+      }
+    }
+  }
+
+  &__link, &__cta {
+    box-shadow: 0 2px 24px 0 rgba(114, 138, 150, 0.12);
+    border: 1px solid $white100;
+    border-radius: 24px;
+    background-color: $white;
+    @media (max-width: 1160px) {
+      border-radius: 18px;
+    }
+    @media (max-width: 860px) {
+      border-radius: 16px;
+    }
+  }
+
+  &__link {
+    padding: 25.5px 24px;
+    justify-content: flex-start;
+    align-items: center;
+    color: $black;
+    background-color: $white;
+    max-width: 100%;
+    font-family: $inter;
+    text-transform: none;
+    font-weight: 500;
+    @media (max-width: 860px) {
+      padding: 25px 21px;
+    }
+    @media (max-width: 400px) {
+      min-width: 170px;
+      padding: 20px;
+    }
+
+    span {
+      color: $blue150;
+      transition: color .4s;
+    }
+
+    &.telegram {
+      &:focus {
+        background-color: $blue150;
+        border-color: transparent;
+        color: $white;
+
+        span {
+          color: $white;
+        }
+
+        svg path {
+          fill: $white;
+        }
+      }
+    }
+
+    &.twitter {
+      &:hover {
+        background-color: transparent;
+        color: $blue150;
+        border-color: $blue150;
+
+        svg path {
+          fill: $blue150;
+        }
+      }
+
+      &:focus {
+        background-color: $blue150;
+        border-color: transparent;
+        color: $white;
+
+        svg path {
+          fill: $white;
+        }
+      }
+
+      svg {
+        transform: translateY(-1px);
+      }
+    }
+
+    &.dyor {
+      &:focus {
+        background-color: $blue150;
+        border-color: transparent;
+        color: $white;
+
+        .fill-one {
+          fill: $white;
+        }
+
+        .fill-two {
+          fill: $blue;
+        }
+      }
+    }
+
+    &.dedust {
+      &:hover {
+        border-color: #FC9800;
+        color: #FC9800;
+      }
+
+      &:focus {
+        background-color: #ffc12b;
+        border-color: transparent;
+        color: $black;
+      }
+    }
+  }
+
+  &__cta {
+    @include flex-between(30);
+    align-items: center;
+    padding: 24px;
+    @media (max-width: 860px) {
+      padding: 24px 20px;
+    }
+    @include r($tablet) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    @media (max-width: 570px) {
+      gap: 15px;
+    }
+  }
+
+  &__text {
+    font-family: $heading;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: .9;
+    letter-spacing: -0.4px;
+    text-transform: uppercase;
+    color: rgba($black50, .4);
+    @media (max-width: 1160px) {
+      font-size: 38px;
+    }
+    @media (max-width: 1090px) {
+      font-size: 34px;
+    }
+    @include r($lg) {
+      font-size: 32px;
+    }
+    @media (max-width: 910px) {
+      font-size: 30px;
+    }
+    @media (max-width: 840px) {
+      font-size: 28px;
+    }
+    @include r($tablet) {
+      font-size: 32px;
+    }
+    @media (max-width: 680px) {
+      font-size: 30px;
+    }
+    @include r($sm) {
+      font-size: 28px;
+    }
+    @media (max-width: 560px) {
+      font-size: 26px;
+      line-height: 1.1;
+    }
+    @media (max-width: 535px) {
+      font-size: 24px;
+    }
+    @include r($phone) {
+      line-height: 1.15;
+    }
+    @media (max-width: 360px) {
+      font-size: 23px;
+    }
+
+    span {
+      color: $black;
+      @media (max-width: 495px) {
+        display: block;
+      }
+    }
+  }
+
+  &__btn {
+    padding: 18px 40px;
+    @media (max-width: 860px) {
+      padding: 18px 34px;
+    }
+    @media (max-width: 680px) {
+      padding: 16px 30px;
+    }
+
+    &:focus {
+      background-color: rgba($blue150, .2);
+      border-color: transparent;
+      color: $black;
+    }
+  }
+}

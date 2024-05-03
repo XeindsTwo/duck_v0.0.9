@@ -1,0 +1,39 @@
+.btn {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  max-width: max-content;
+  font-weight: 700;
+  line-height: 1.3;
+  text-transform: uppercase;
+  font-family: $mono;
+  background-color: $blue;
+  color: $white;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 32px;
+  padding: 12px 24px;
+  transition: background-color .4s, border .4s, color .4s;
+
+  &:hover {
+    background-color: transparent;
+    border-color: $blue150;
+    color: $blue150;
+  }
+
+  &.gray {
+    background-color: $white50;
+    color: $black;
+
+    &:hover {
+      background-color: $blue150;
+      color: $white;
+    }
+
+    &:focus {
+      background-color: rgba($blue150, .1);
+      border-color: $blue150;
+      color: $black;
+    }
+  }
+}

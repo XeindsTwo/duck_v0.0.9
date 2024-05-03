@@ -1,0 +1,132 @@
+.roadmap {
+  position: relative;
+  padding-bottom: 80px;
+  @include r($lg) {
+    padding-bottom: 70px;
+  }
+  @include r($phone) {
+    margin-top: 80px;
+    padding-bottom: 50px;
+  }
+
+  &::before {
+    @include pseudo;
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, rgba(247, 249, 251, 0.00) 0%, rgba(48, 163, 230, 0.08) 96.52%);
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 48px;
+    max-width: 712px;
+    margin: 0 auto 153px;
+    @include r($tablet) {
+      grid-gap: 130px 35px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 180px;
+    }
+    @media (max-width: 595px) {
+      flex-direction: column;
+      align-items: center;
+      grid-gap: 190px;
+    }
+    @include r($phone) {
+      margin-bottom: 170px;
+    }
+  }
+
+  &__item {
+    @include flex-column(7);
+    align-items: center;
+    text-align: center;
+    position: relative;
+    @include r($tablet) {
+      max-width: 47%;
+      width: 100%;
+    }
+    @media (max-width: 650px) {
+      max-width: 45%;
+    }
+    @media (max-width: 595px) {
+      max-width: 100%;
+    }
+
+    &.active {
+      .roadmap__name {
+        color: $black;
+      }
+
+      .roadmap__img {
+        transform: scale(1.5) translateY(3px);
+      }
+    }
+  }
+
+  &__name {
+    font-family: $heading;
+    letter-spacing: -0.4px;
+    text-transform: uppercase;
+    font-size: 40px;
+    line-height: .9;
+    font-weight: 700;
+    transition: color .4s;
+    color: rgba($black, .4);
+    @include r($lg) {
+      font-size: 36px;
+      line-height: .94;
+      max-width: 185px;
+    }
+  }
+
+  &__img {
+    @include objectCoverBg;
+    position: absolute;
+    top: 7px;
+    z-index: 2;
+    transform: scale(1.25);
+    transition: transform 1.5s;
+    @include r($tablet) {
+      top: -13px;
+    }
+    @media (max-width: 595px) {
+      top: -5px;
+      transform: scale(1.15);
+    }
+    @include r($phone) {
+      top: -13px;
+    }
+  }
+
+  &__link {
+    padding: 18px 28px;
+    background-color: $white;
+    border-color: $white100;
+    color: $black;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+
+    &:hover {
+      background-color: $blue150;
+      color: $white;
+    }
+
+    &:focus {
+      border-color: $blue150;
+      color: $blue150;
+      background-color: transparent;
+    }
+  }
+}

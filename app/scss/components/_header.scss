@@ -1,0 +1,126 @@
+.header {
+  padding: 8px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 30;
+  transition: all .4s ease-in-out;
+  @media (max-width: 1095px) {
+    padding: 10px 0;
+  }
+
+  &.white {
+    background-color: $white;
+  }
+
+  &__inner {
+    @include flex-between(30);
+    align-items: center;
+    @media (max-width: 1095px) {
+      position: relative;
+      z-index: 53;
+      gap: 20px;
+    }
+  }
+
+  &__logo, &__right {
+    max-width: 126px;
+    width: 100%;
+    @media (max-width: 1095px) {
+      max-width: max-content;
+      width: auto;
+    }
+  }
+
+  &__nav {
+    @media (max-width: 1095px) {
+      display: none;
+    }
+
+    &.mobile {
+      position: fixed;
+      height: 100vh;
+      width: 100%;
+      left: 0;
+      top: 0;
+      padding: 90px 40px 30px;
+      background-color: $white;
+      display: none;
+      z-index: 50;
+      transform: translateX(-100%);
+      transition: transform .7s ease-in-out;
+      @media (max-width: 1095px) {
+        display: block;
+      }
+      @media (max-width: 910px) {
+        padding: 90px 30px 30px;
+      }
+      @include r($tablet) {
+        padding: 90px 25px 30px;
+      }
+      @include r($sm) {
+        padding: 90px 20px 30px;
+      }
+      @include r($phone) {
+        padding: 90px 15px 30px;
+      }
+
+      &.active {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  &__list {
+    @include flex-align-center(24);
+    @media (max-width: 1095px) {
+      gap: 33px;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+
+  &__link {
+    font-family: $mono;
+    color: rgba($black, .4);
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+    transition: color .4s, border .4s;
+    @media (max-width: 1095px) {
+      font-size: 18px;
+    }
+    @include r($phone) {
+      font-size: 16px;
+    }
+
+    &.active {
+      color: $black;
+      pointer-events: none;
+    }
+
+    &:hover {
+      color: $black;
+    }
+
+    &:focus {
+      color: $blue150;
+      border-bottom-color: $blue150;
+    }
+  }
+
+  &__right {
+    @media (max-width: 1095px) {
+      margin-left: auto;
+      align-self: stretch;
+      a {
+        height: 100%;
+      }
+    }
+  }
+
+  .btn.gray {
+    @include r($phone) {
+      padding: 12px 20px;
+    }
+  }
+}

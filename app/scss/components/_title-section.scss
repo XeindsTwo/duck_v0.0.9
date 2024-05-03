@@ -1,0 +1,30 @@
+.title-section {
+  font-family: $heading;
+  font-size: 64px;
+  font-weight: 900;
+  line-height: .9;
+  letter-spacing: -0.64px;
+  text-transform: uppercase;
+  @media (max-width: 1400px) {
+    font-size: 60px;
+  }
+  @include r($desktop) {
+    font-size: 54px;
+  }
+  @include r($lg) {
+    font-size: 50px;
+  }
+  @include r($tablet) {
+    font-size: 48px;
+  }
+  @include r($sm) {
+    font-size: 44px;
+    line-height: .94;
+  }
+  @include r($phone) {
+    font-size: 42px;
+  }
+  @media (max-width: 390px) {
+    font-size: 40px;
+  }
+}

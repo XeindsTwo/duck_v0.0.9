@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter-Medium.woff2') format('woff2'),
+  url('../fonts/Inter-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Interfaces Mono';
+  src: url('../fonts/TTInterfacesMono-Bold.woff2') format('woff2'),
+  url('../fonts/TTInterfacesMono-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Heading Pro';
+  src: url('../fonts/HeadingPro-Bold.woff2') format('woff2'),
+  url('../fonts/HeadingPro-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Heading Pro';
+  src: url('../fonts/HeadingPro-Heavy.woff2') format('woff2'),
+  url('../fonts/HeadingPro-Heavy.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
